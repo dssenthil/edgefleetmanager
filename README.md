@@ -19,12 +19,9 @@ A lightweight agent-based system that monitors Raspberry Pi services, detects fa
 
 ## Architecture
 
-+-----------------------+ Heartbeat +---------------------------+
-| Edge Agent | ------------------> | Controller Agent |
-| (Raspberry Pi) | | (FastAPI Orchestrator) |
-| - Check service | | - Show agent statuses |
-| - Check disk | | - Trigger remediation |
-+-----------------------+ <------ SSH ------- +---------------------------+
+![Architecture Diagram](architecture.png)
+
+
 
 local service restart via systemd
 
