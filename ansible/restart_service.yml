@@ -1,0 +1,9 @@
+---
+- name: Restart service on host
+  hosts: all
+  become: yes
+  tasks:
+    - name: Restart demo service
+      ansible.builtin.service:
+        name: "{{ service_name }}"
+        state: restarted
